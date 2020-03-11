@@ -1,33 +1,28 @@
 const mongoose = require('mongoose');
 const ApiskyModel = mongoose.model('Apisky');
 
+
 // list
-exports.listMentions = async (req, res) => {
+exports.listUser = async (req, res) => {
   try {
-    const data = await Mentions.find({});
+    const data = await ApiskyModel.find({});
     res.status(200).send(data);
   } catch (e) {
-    res.status(500).send({message: 'Falha ao carregar as menções.'});
+    res.status(500).send({message: 'Falha ao carregar usuario.'});
   }
 };
 
 // create
-exports.createMention = async (req, res) => {
+exports.createUser = async (req, res) => {
   try {
-    const apisky = new ApiskyModel({
-      nome= req.body.nome,
-      email= req.body.email,
-      senha= req.body.senha,
-    //   telefones.numero = req.body.telefone.numero,
-    //   telefones.ddd = req.body.telefone.ddd,
-    });
+    const apisky = new ApiskyModel(req.body);
+   
+    console.log("apisky")
 
-    console.log(mention)
+   await apisky.save();
 
-    await mention.save();
-
-    res.status(201).send({message: 'Menção cadastrada com sucesso!'});
+    res.status(201).send({message: 'Salvo com sucesso!'});
   } catch (e) {
-    res.status(500).send({message: 'Falha ao cadastrar a menção.'});
+    res.status(500).send({message: 'Falha ao cadastrar.' + e });
   }
 };

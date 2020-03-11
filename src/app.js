@@ -1,9 +1,15 @@
 const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config();
+const bodyParser = require('body-parser')
+
+
+
 
 // App
 const app = express();
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 
 // Database
 mongoose.connect(process.env.DATABASE_CONNECTION_STRING, {
@@ -43,5 +49,6 @@ process.on('SIGINT', () => {
 // Load routes
 const indexRoutes = require('./routes/index-routes');
 app.use('/', indexRoutes);
+
 
 module.exports = app;

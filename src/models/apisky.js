@@ -5,7 +5,7 @@ const schema = new Schema({
     Id: {
         Type: Number,
     },
-        nome: {
+    nome: {
         type: String,
     },
     email: {
