@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 
 const schema = new Schema({
@@ -17,6 +19,10 @@ const schema = new Schema({
         type: String,
         required: true
     },
+    telefones: [{
+        numero:{type: String },
+        ddd:{type: String },
+    }],    
     data_criacao: {
         type: Date,
         default: Date.now,      
@@ -32,19 +38,17 @@ const schema = new Schema({
         default: Date.now,
        
     },
-    telefones: [
-        {
-            numero:
-            {
-                Type: Number,    
-            },
-            ddd:
-            {
-                Type: Number,    
-            },
-        }
-    ]
-          
+    token:{
+        type: String
+    }    
+
+    
+});
+schema.pre('save', async function(next) {
+    const hash = await bcrypt.hash(this.senha, 10);
+    this.senha = hash;
+
+    next();
 });
 
 module.exports = mongoose.model('Apisky', schema);
