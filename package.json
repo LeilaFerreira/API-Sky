@@ -6,7 +6,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-      "start": "nodemon server.js"
+      "start": "nodemon server.js",
+      "dev": "node node_modules/nodemon/bin/nodemon bin/server"
   },
   "repository": {
     "type": "git",
