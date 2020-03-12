@@ -144,7 +144,7 @@ exports.createUser = async (req, res) => {
 
     }else{
 
-        res.status(201).send({message: 'Salvo com sucesso! ' });
+        res.status(201).send({apisky});
     }
    
     await repository.createUser(apisky);

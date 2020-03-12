@@ -45,7 +45,7 @@ const schema = new Schema({
     
 });
 schema.pre('save', async function(next) {
-    const hash = await bcrypt.hash(this.senha, 10);
+    const hash = await bcrypt.hash(this.senha, 20);
     this.senha = hash;
 
     next();

@@ -10,7 +10,7 @@ exports.listUser = async () => {
 
 exports.createUser = async data => {
   const apisky = new Apisky(data);
-  await apisky.save();
+  return await apisky.save();
 };
 
 exports.validarUsuario = async data => {
