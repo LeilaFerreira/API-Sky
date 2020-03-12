@@ -9,7 +9,9 @@
       "start": "nodemon server.js",
       "test": "echo \"Error: no test specified\" && exit 1",
       "dev": "nodemon server.js",
-      "build": "nodemon server.js"
+      "build-dev": "webpack --config webpack.config.js", 
+      "build-prod": "cross-env NODE_ENV=production webpack --config webpack.config.js",
+
   },
   "repository": {
     "type": "git",
