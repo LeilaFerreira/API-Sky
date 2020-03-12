@@ -7,6 +7,7 @@ const repository = require('../repositores/apisky-repository');
 const authConfig = require('../config/auth');
 
 
+
 function geraToken(id) {
     return jwt.sign({ id }, authConfig.secret, {
         expiresIn: authConfig.expiresIn,
@@ -41,7 +42,7 @@ exports.postAuth = async (req, res) => {
     }
 
 
-    const tokenGerado = this.geraToken(id)
+    const tokenGerado = geraToken(id)
     
     let apiskyUpdate = new ApiskyModel({
         Id: id,
