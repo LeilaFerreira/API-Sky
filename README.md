@@ -10,12 +10,12 @@
 
 -Usuarios
 
-1.GET /listarUsuarios - Buscar todos os usuários
-2.GET /buscarUsuario/:id
-3.POST /auth - Logar usuario
-4.POST /cadastro - Cadastrar usuario
-5.GET /buscarUsuarioNome/:nome
-6.GET /excluirUsuario/:id - Excluir usuario por ID
+- GET /listarUsuarios - Buscar todos os usuários
+- GET /buscarUsuario/:id
+- POST /auth - Logar usuario
+- POST /cadastro - Cadastrar usuario
+- GET /buscarUsuarioNome/:nome
+- GET /excluirUsuario/:id - Excluir usuario por ID
 
 **Ferramentas e Tecnologias utilizadas**
 
