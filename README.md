@@ -1,33 +1,43 @@
+#### **_APIRestfull Node.js com MongoDB e AWS_**
 
-<h1>Objetivo:<h1>
-Foi criado um aplicativo backend que expoe uma API RESTful de criação de sing up/sign in.
+#### Objetivo:
+  
+-Foi criado um aplicativo backend que expoe uma API RESTful de criação de sing up/sign in.
 
-Após clonar o projeto, instalar => npm i express
-Rotas realizadas
+-Após clonar o projeto, instalar => npm i express
 
-Usuarios
-GET /listarUsuarios - Buscar todos os usuários
-GET /buscarUsuario/:id
-POST /auth - Logar usuario
-POST /cadastro - Cadastrar usuario
-GET /buscarUsuarioNome/:nome
-GET /excluirUsuario/:id - Excluir usuario por ID
+**Rotas realizadas**
 
-Ferramentas e Tecnologias utilizadas
-Node.js
-MongoDB na nuvem
-NPM
-Visual Studio Code
-Git e Github
-Heroku
-Dependências utilizadas
+-Usuarios
 
-Express.js
-Nodemon
-Body-Parser
-Mongoose
-Bcryptjs
-JWT
-Eslint
+1.GET /listarUsuarios - Buscar todos os usuários
+2.GET /buscarUsuario/:id
+3.POST /auth - Logar usuario
+4.POST /cadastro - Cadastrar usuario
+5.GET /buscarUsuarioNome/:nome
+6.GET /excluirUsuario/:id - Excluir usuario por ID
 
-Heroku: https://apirestfullsky.herokuapp.com/
+**Ferramentas e Tecnologias utilizadas**
+
+
+- Node.js
+- MongoDB na nuvem
+- AWS
+- NPM
+- Visual Studio Code
+- Git e Github
+- Heroku
+
+**Dependências utilizadas**
+
+
+- Express.js
+- Nodemon
+- Body-Parser
+- Mongoose
+- Bcryptjs
+- JWT
+- Eslint
+
+
+#### Heroku - https://apirestfullsky.herokuapp.com/
