@@ -51,4 +51,25 @@ schema.pre('save', async function(next) {
     next();
 });
 
+const usuarios = [];
+
+const addUsuario = function(nome) {
+
+    
+    usuario.push({
+        nome: nome,
+      
+       
+    });
+    return {
+        nome: nome,
+       
+       
+    };
+}
+
+const getUsuarios = function() {
+    return usuarios;
+};
+
 module.exports = mongoose.model('Apisky', schema);

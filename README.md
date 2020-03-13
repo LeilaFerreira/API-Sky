@@ -36,6 +36,8 @@ Após clonar o projeto, instalar => npm i express
 - Bcryptjs
 - JWT
 - Eslint
+- Mocha
+- Chai
 
 
 #### Heroku - https://apirestfullsky.herokuapp.com/
