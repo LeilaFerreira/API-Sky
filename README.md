@@ -2,13 +2,11 @@
 
 #### Objetivo:
   
--Foi criado um aplicativo backend que expoe uma API RESTful de criação de sing up/sign in.
+Foi criado um aplicativo backend que expoe uma API RESTful de criação de sing up/sign in.
 
--Após clonar o projeto, instalar => npm i express
+Após clonar o projeto, instalar => npm i express
 
 **Rotas realizadas**
-
--Usuarios
 
 - GET /listarUsuarios - Buscar todos os usuários
 - GET /buscarUsuario/:id
