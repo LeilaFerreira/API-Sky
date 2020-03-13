@@ -18,7 +18,7 @@ const usuarioSchema = {
 describe('Teste das funcoes', () => {
 
     it('addUsuario', () => {
-        const usuario = index.addUsuario('le');
+        const usuario = index.addUsuario('leila');
 
         // Verifica se as caracteristicas do objeto usuario é igual ao usuarioSchema
         chai.expect(usuario).to.containSubset(usuarioSchema);
@@ -26,7 +26,7 @@ describe('Teste das funcoes', () => {
     it('getUsuarios', () => {
 
         index.addUsuario('le');
-        index.addUsuario('leo');
+        index.addUsuario('lili');
         const usuarios = index.getUsuarios();
         
         chai.expect(usuarios.length).to.be.equals(3);
