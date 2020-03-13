@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "ca6caf4c-11d2-4088-92fb-ce772f305b38",
+		"name": "ApiSky",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/cadastro",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"nome\": \"Dio\",\r\n\"email\": \"Dio@mail\",\r\n\"senha\": \"1234\",\r\n\"telefones\": [{\r\n \"numero\": \"123456789\",\r\n \"ddd\": \"11\"\r\n }]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/cadastro",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cadastro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/buscarUsuario/5e69c34499ffca50fcb5e46d",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"buscarUsuario",
+						"5e69c34499ffca50fcb5e46d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/listarUsuarios",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVlNjlkNzI5MmU3YjNmNzg2MDRiYjAxZiIsImlhdCI6MTU4NDAyNjY2OSwiZXhwIjoxNTg0MDI4NDY5fQ.elVkK-jtvA8KACFF0CefhvTIGgcnF1CMYLRHwRNrI0M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/listarUsuarios",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"listarUsuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/auth",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"dio20@mail.com\",\n\t\"senha\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/auth",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/buscarUsuario",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/buscarUsuario/5e69c34499ffca50fcb5e46d",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"buscarUsuario",
+						"5e69c34499ffca50fcb5e46d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/buscarUsuarioNome",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/buscarUsuarioNome/Dio10",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"buscarUsuarioNome",
+						"Dio10"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
