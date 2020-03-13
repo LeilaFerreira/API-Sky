@@ -13,7 +13,7 @@ router.get('/', (req, res, next) => {
 
 
 
-router.post('/cadastro', middleware.checkToken, [
+router.post('/cadastro', [
   check('email').isEmail(),
   check('senha').isLength({ min: 6 }).withMessage("senha precisa ter no minimo 6 caracteres.")
 ], apiskyController.createUser );
