@@ -54,7 +54,7 @@ exports.postAuth = async (req, res) => {
     });
     const filter = {Id: id}
 
-     await  apiskyUpdate.updateOne(filter, apiskyUpdate);
+    // await  apiskyUpdate.updateOne(filter, apiskyUpdate);
     
    
         
