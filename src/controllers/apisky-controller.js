@@ -18,9 +18,9 @@ function geraToken(id) {
 // Auth
 exports.postAuth = async (req, res) => {
     const { email, senha} = req.body;
-    
+    console.log("LOG ============== Entrou no metodo de login")
     const apisky = await ApiskyModel.find({email});
-  
+    console.log("LOG ============== Passou pelo teste do email")
   
 // Object.keys(apisky).length pega o tamanho do array apisky
     if ( Object.keys(apisky).length == 0) {
@@ -29,21 +29,22 @@ exports.postAuth = async (req, res) => {
         const { id, nome } = apisky[0];
 
     try {
-      
+        console.log("LOG ============== Preparando para conferir senha criptografada")
        const senhaValida = await bcrypt.compare(senha, apisky[0].senha)
         if (!senhaValida) {
             throw new Error('Usuario e/ou senha inválidos!')
         }
-
+        console.log("LOG ============== Senha OK")
 
       
     } catch (err) {
         return res.status(401).send({ error: err.message });
     }
 
-
-    const tokenGerado = geraToken(id)
     
+    const tokenGerado = geraToken(id)
+    console.log("LOG ============== Gerando o Yoken " + tokenGerado)
+
     let apiskyUpdate = new ApiskyModel({
         Id: id,
         token: tokenGerado,
@@ -57,8 +58,9 @@ exports.postAuth = async (req, res) => {
     // await  apiskyUpdate.updateOne(filter, apiskyUpdate);
     
    
-        
+    console.log("LOG ============== Preparando Retorno")   
     try {
+        console.log("LOG ============== FIM")
         return res.json({
             user: {
                 id,
