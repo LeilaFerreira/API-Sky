@@ -30,7 +30,7 @@ exports.postAuth = async (req, res) => {
 
     try {
         console.log("LOG ============== Preparando para conferir senha criptografada")
-       const senhaValida = await bcrypt.compare(senha, apisky[0].senha)
+       const senhaValida =  bcrypt.compare(senha, apisky[0].senha)
         if (!senhaValida) {
             throw new Error('Usuario e/ou senha inválidos!')
         }
